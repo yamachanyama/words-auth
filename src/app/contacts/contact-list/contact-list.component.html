@@ -1,0 +1,33 @@
+<div class="row">
+  <h3>{{ok_ng}} List: <input [(ngModel)]="keyword">
+    <!--    <h3>Words: <input #keyword id="test" [value]=getCurrentValue()/> -->
+    <button class="btn btn-primary" *ngIf="keyword" routerLink="/search" [queryParams] = "{keyword: keyword}">Search!!</button>
+  </h3>
+
+  <table class="table table-hover">
+    <tbody>
+      <tr *ngFor="let contact of contacts; index as i">
+        
+        <!--一行分のデータを表示する-->
+        <td>
+          <mat-checkbox [(ngModel)]="check[i]"></mat-checkbox>
+        </td>
+        <td>
+          <a  routerLink="/detail/{{contact._id}}"> {{contact.word}}</a>
+        </td>
+        <td>{{contact.meaning}}</td>
+        <td>{{contact.createDate | date }}</td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-warning" routerLink="/detail/0">New</button>
+  <button class="btn btn-primary" (click)="changePage()">OK/NG</button>
+  <button class="btn btn-primary" (click)="change_status()">Change NG to OK</button>
+  <!-- <ngb-pagination id="sample" [collectionSize]="count"  [(page)]="page" [pageSize]="pageSize" [maxSize]="maxSize" [rotate]="true" [ellipses]="false" [boundaryLinks]="true" (pageChange)="next_list()" routerLink="" [queryParams] ="{page: page}"> -->
+  <!-- (pageChange) -> https://ng-bootstrap.github.io/#/components/pagination/api, https://github.com/jhipster/generator-jhipster/issues/10931 -->
+  <ngb-pagination id="sample" [collectionSize]="count"  [(page)]="page" [pageSize]="pageSize" [maxSize]="maxSize" [rotate]="true" [ellipses]="false" [boundaryLinks]="true" (pageChange)="setPage($event)">
+
+  </ngb-pagination>
+</div>

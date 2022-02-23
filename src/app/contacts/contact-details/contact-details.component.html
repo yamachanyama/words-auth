@@ -1,0 +1,73 @@
+<div *ngIf="contact" class="row">
+  <div class="col-md-12">
+    <h2 *ngIf="contact._id">Word Detail</h2>
+    <h2 *ngIf="!contact._id">New Contact</h2>
+  </div>
+</div>
+
+<div *ngIf="contact" class="row">
+  <div>
+    <div *ngIf = "contact._id; else showNewContact">
+    <swiper
+      [initialSlide] = "startpage"
+      [slidesPerView]="1"
+      [spaceBetween]="30"
+      [loop]="true"
+      [navigation]="true"
+      class="mySwiper"
+    >
+    <ng-container *ngFor="let contact of contacts; index as i">
+      <ng-template swiperSlide><div  align="center">
+
+        <mat-form-field appearance="fill">
+          <mat-label>Word</mat-label>
+          <textarea matInput [(ngModel)]="contact.word"></textarea>
+        </mat-form-field>
+        <p></p>
+        <mat-form-field appearance="fill">
+          <mat-label>Meaning</mat-label>
+          <textarea matInput [(ngModel)]="contact.meaning"></textarea>
+        </mat-form-field>
+        <p></p>
+        <p></p>
+
+        <div *ngIf = "i==startpage">
+          <button class="btn btn-info" *ngIf="contact._id" (click)="updateContact()">Update</button>
+          <button class="btn btn-danger" *ngIf="contact._id" (click)="deleteContact()">Delete</button>
+        </div>
+
+      </div></ng-template>
+    </ng-container>
+    <p></p>
+    </swiper>
+    </div>
+
+    <ng-template #showNewContact>
+      <div class="form-group">
+        <label for="contact-word">Word</label>
+        <input class="form-control" name="contact-word" [(ngModel)]="contact.word" placeholder="Word"/>
+      </div>
+  
+      <div class="form-group">
+        <label for="contact-meaning">Meaning</label>
+        <input class="form-control" name="contact-meaning" [(ngModel)]="contact.meaning" placeholder="Meaning"/>
+      </div>
+
+      <button class="btn btn-primary" (click)="createContact()">Create</button>
+
+    </ng-template>
+
+  </div>
+
+  <p></p>
+  <b>Status: </b>
+  <span *ngFor = "let state of NgSel">
+    <input type = "radio" name="contact-NG" [value]="state" [(ngModel)]="contact.NG">{{state}} 
+  </span>
+  <p></p>
+  <div><b>Create/Update:</b> {{contact.createDate|date}}</div>
+  <p></p>
+  <button class="btn btn-dark" (click)="goBack()">go back</button>
+    
+  <!-- </form> -->
+</div>

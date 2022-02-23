@@ -1,0 +1,48 @@
+<div class="base">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <a mat-icon-button routerLink="" [queryParams] = "{page: 1, ok_ng: 'NG'}">
+        <mat-icon>home</mat-icon>
+      </a>
+      <span style="flex:auto;"></span>
+      <span>Words</span>
+      <span style="flex:auto;"></span>
+      <div *ngIf = "afAuth.user | async; else showLogin">
+        <button mat-icon-button (click)="logout()">
+        <mat-icon>{{'done'}}</mat-icon>
+        </button>
+      </div>
+      <ng-template #showLogin>
+        <button mat-icon-button (click)="login()">
+        <mat-icon>{{'priority_high'}}</mat-icon>
+        </button>
+      </ng-template>
+
+    <!--
+    <button mat-icon-button (click)="loginCheck()">
+    <mat-icon>{{currentUser !='(not logined.)' ? 'done' : 'priority_high'}}</mat-icon>
+    </button> -->
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+
+  <!-- https://github.com/angular/angularfire/blob/master/docs/auth/getting-started.md   -->
+  <div *ngIf = " afAuth.user | async as user; else showNotLogin " align="right" class="user">[ USER: {{user.displayName}} ]</div>
+
+  <!-- <div *ngIf = "afAuth.user | async; else showNotLogin" align="right" class="user">USER async {{ DisplayName }}</div> -->
+  <ng-template #showNotLogin><div  align="right">[ USER: not logined. ]</div></ng-template>
+  <!-- <div *ngIf != "afAuth.user | async" align="right" class="user">[ USER: not logined. ]</div> -->
+  <!--  <div align="right" class="user">[ USER: {{currentUser}} ]</div> -->
+
+  <div class="content">
+    <div  *ngIf = "afAuth.user | async">
+      <router-outlet></router-outlet>
+      <!--
+      <router-outlet *ngIf="currentUser !='(not logined.)'"></router-outlet> -->
+    </div>
+    <mat-divider></mat-divider>
+    <!--
+    <p class="footer">S.Y.</p> -->
+  </div>
+
+</div>

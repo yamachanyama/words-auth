@@ -1,0 +1,58 @@
+[
+ {
+  "id": "1",
+  "word": "a",
+  "meaning": "あ",
+  "NG": "FALSE",
+  "MEMENTO_ID": "1472730378446"
+  },
+ {
+  "id": "2",
+  "word": "b",
+  "meaning": "い",
+  "NG": "FALSE",
+  "MEMENTO_ID": "1472730378447"
+  },
+ {
+  "id": "3",
+  "word": "c",
+  "meaning": "う",
+  "NG": "FALSE",
+  "MEMENTO_ID": "1472730378448"
+  },
+ {
+  "id": "4",
+  "word": "d",
+  "meaning": "え",
+  "NG": "FALSE",
+  "MEMENTO_ID": "1472730378449"
+  },
+ {
+  "id": "5",
+  "word": "e",
+  "meaning": "お",
+  "NG": "FALSE",
+  "MEMENTO_ID": "1472730378450"
+  },
+  {
+  "id": "6",
+  "word": "f",
+  "meaning": "か",
+  "NG": "FALSE",
+  "MEMENTO_ID": "1472730378450"
+  },
+  {
+  "id": "7",
+  "word": "g",
+  "meaning": "き",
+  "NG": "FALSE",
+  "MEMENTO_ID": "1472730378450"
+  },
+  {
+  "id": "8",
+  "word": "h",
+  "meaning": "く",
+  "NG": "FALSE",
+  "MEMENTO_ID": "1472730378450"
+  }  
+ ]

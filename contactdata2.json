@@ -1,0 +1,88 @@
+{
+  "contacts": [
+    {
+      "id": 3,
+      "word": "cc",
+      "meaning": "う",
+      "NG": "FALSE",
+      "MEMENTO_ID": "1472730378448"
+    },
+    {
+      "id": 4,
+      "word": "d",
+      "meaning": "え",
+      "NG": "FALSE",
+      "MEMENTO_ID": "1472730378449"
+    },
+    {
+      "id": 5,
+      "word": "e",
+      "meaning": "お",
+      "NG": "FALSE",
+      "MEMENTO_ID": "1472730378450"
+    },
+    {
+      "id": 6,
+      "word": "f",
+      "meaning": "か",
+      "NG": "FALSE",
+      "MEMENTO_ID": "1472730378450"
+    },
+    {
+      "id": 7,
+      "word": "g",
+      "meaning": "き",
+      "NG": "FALSE",
+      "MEMENTO_ID": "1472730378450"
+    },
+    {
+      "id": 8,
+      "word": "h",
+      "meaning": "く",
+      "NG": "FALSE",
+      "MEMENTO_ID": "1472730378450"
+    },
+    {
+      "id": 9,
+      "word": "yama",
+      "meaning": "yama",
+      "NG": "TRUE",
+      "MEMENTO_ID": ""
+    },
+    {
+      "id": 10,
+      "word": "10",
+      "meaning": "",
+      "NG": "TRUE",
+      "MEMENTO_ID": ""
+    },
+    {
+      "id": 11,
+      "word": "11",
+      "meaning": "",
+      "NG": "TRUE",
+      "MEMENTO_ID": ""
+    },
+    {
+      "id": 12,
+      "word": "12",
+      "meaning": "",
+      "NG": "TRUE",
+      "MEMENTO_ID": ""
+    },
+    {
+      "id": 13,
+      "word": "あああ",
+      "meaning": "",
+      "NG": "TRUE",
+      "MEMENTO_ID": ""
+    },
+    {
+      "id": 14,
+      "word": "かかか",
+      "meaning": "",
+      "NG": "TRUE",
+      "MEMENTO_ID": ""
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<div class="row">
+  <h3>Searched List: <input [(ngModel)]="keyword">
+    <!--    <h3>Words: <input #keyword id="test" [value]=getCurrentValue()/> -->
+    <button class="btn btn-primary" *ngIf="keyword" routerLink="/search" [queryParams] = "{keyword: keyword}" (click)="new_search()">Search!!</button>
+  </h3>
+
+  <ul class="list-group">
+    <a class="list-group-item"
+      *ngFor="let contact of contacts | slice:(page-1)*pageSize: page*pageSize" routerLink="/detail/{{contact._id}}">
+      {{contact.word}} 　（ {{contact.createDate|date}}、{{contact.NG }}）
+    </a>
+  </ul>
+<button class="btn btn-warning" routerLink="/detail/0">New</button>
+<ngb-pagination [collectionSize]="contacts.length" [(page)]="page" [pageSize]="pageSize" [maxSize]="maxSize" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+<button class="btn btn-dark" (click)="goBack()">go back</button>
+</div>
+
