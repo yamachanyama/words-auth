@@ -17,7 +17,7 @@
     "debug4": "ng serve --open",
     "postinstall": "ng build --output-path dist",
     "postinstall": "ng build --aot -dist",
-    "postinstall": "ng build --aot"
+    "postinstall": "ng build --aot --output-path dist"
   },
   "repository": {
     "type": "git",
