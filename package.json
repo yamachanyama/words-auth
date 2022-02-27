@@ -16,7 +16,8 @@
     "debug3": "json-server --watch contactdata2.json --routes routes.json",
     "debug4": "ng serve --open",
     "postinstall": "ng build --output-path dist",
-    "postinstall": "ng build --aot -dist"
+    "postinstall": "ng build --aot -dist",
+    "postinstall": "ng build --aot"
   },
   "repository": {
     "type": "git",
