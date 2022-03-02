@@ -7,11 +7,15 @@ var CONTACTS_COLLECTION = "words";
 
 var app = express();
 // bodyParser.json　で警告が出ているので、下記を参考にexpress.jsonに変更2021.10.30
+// 因みにbodyParserはクライアントからのpost利用の際にサーバ側で必要となるもの。
 // https://qiita.com/atlansien/items/c587a0bf2f7f9022107c
 // app.use(bodyParser.json());
 app.use(express.json());
 
 // Create link to Angular build directory
+// express.staticによりWebサーバを簡単に作成できる　https://nodejs.keicode.com/nodejs/express-static.php
+// 従ってHerokuではnode server.jsのみでOKで、フロントエンド（angular）用にWebサーバを立てる必要はなかった。
+// __dirnameとは　https://gist.github.com/uupaa/da42698d6b2d2cbb3cca
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
 
