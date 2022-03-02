@@ -7,7 +7,7 @@
     "ng": "ng",
     "start": "node server.js",
     "start1": "run-p debug1 debug2",
-    "build": "ng build",
+    "build":,
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
