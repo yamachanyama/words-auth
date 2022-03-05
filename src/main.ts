@@ -9,6 +9,7 @@ if (environment.production) {
   enableProdMode();
 }
 
+//https://stackoverflow.com/questions/51089478/angular-6-pwa-with-node-not-working
 //platformBrowserDynamic().bootstrapModule(AppModule).then(() => {
 //  if ('serviceWorker' in navigator && environment.production) {
 //    navigator.serviceWorker.register('ngsw-worker.js');
