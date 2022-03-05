@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, ChangeDetectorRef} from '@angular/core';
 import { Contact } from '../contact';
 import { ContactService } from '../contact.service';
-import { ActivatedRoute,Router } from '@angular/router';
+import { ActivatedRoute,Router, NavigationEnd } from '@angular/router';
 import { Observable,Observer,fromEvent,from } from 'rxjs';
 
 import { Location } from '@angular/common';
