@@ -114,7 +114,7 @@ export class ContactListComponent implements OnInit {
 
   // ngb-pagenationのボタンが押された時に、ページをセットしリストを表示する
   setPage(event: number) {
-    // eurryParamsにてURLをセットする
+    // queryParamsにてURLをセットする
     this.router.navigate([], { queryParams: { page: event, ok_ng: this.ok_ng } });
     // 該当ページのリストデータを取得する
     this.get_list();
