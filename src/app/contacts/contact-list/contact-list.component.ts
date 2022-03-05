@@ -28,15 +28,31 @@ export class ContactListComponent implements OnInit {
 
   /* selectedContact: Contact */  
   check: boolean | any[] =[this.pageSize];
- 
+
+   //追加
+  navigationSubscription;
+
   constructor (
     private contactService: ContactService,
     private route: ActivatedRoute,
     private location: Location,
     private router: Router,
     private changeDetectorRef: ChangeDetectorRef,
-    private valueSharedService: ValueSharedService
-    ){}
+    private valueSharedService: ValueSharedService)
+    {
+    //https://qiita.com/ParisMichael/items/6a1bed373f0bf4ce755d
+    this.navigationSubscription = this.router.events.subscribe((e: any) => {
+      // NavigationEnd eventが起こった時に初期化メソッドを呼んで、リロードっぽく見せる。
+      if (e instanceof NavigationEnd) {
+        this.initialiseInvites();
+      }
+    })
+  }
+
+  // 好きな初期化メソッド
+  initialiseInvites() {}
+
+
 
   ngOnInit() {
     // URLからパラメータを取得する
@@ -122,4 +138,3 @@ export class ContactListComponent implements OnInit {
     // this.changeDetectorRef.detectChanges();
   }
 
-}
