@@ -29,8 +29,8 @@ export class ContactListComponent implements OnInit {
   /* selectedContact: Contact */  
   check: boolean | any[] =[this.pageSize];
 
-   //追加 https://qiita.com/ParisMichael/items/6a1bed373f0bf4ce755d
-  navigationSubscription;
+  //追加 https://qiita.com/ParisMichael/items/6a1bed373f0bf4ce755d
+  //navigationSubscription;
 
   constructor (
     private contactService: ContactService,
@@ -38,21 +38,20 @@ export class ContactListComponent implements OnInit {
     private location: Location,
     private router: Router,
     private changeDetectorRef: ChangeDetectorRef,
-    private valueSharedService: ValueSharedService)
-    {
+    private valueSharedService: ValueSharedService){
     //https://qiita.com/ParisMichael/items/6a1bed373f0bf4ce755d
-    this.navigationSubscription = this.router.events.subscribe((e: any) => {
+    //this.navigationSubscription = this.router.events.subscribe((e: any) => {
       // NavigationEnd eventが起こった時に初期化メソッドを呼んで、リロードっぽく見せる。
-      if (e instanceof NavigationEnd) {
-        this.initialiseInvites();
-      }
-    })
+    //  if (e instanceof NavigationEnd) {
+    //    this.initialiseInvites();
+    //  }
+    //})
   }
 
   // 好きな初期化メソッドhttps://qiita.com/ParisMichael/items/6a1bed373f0bf4ce755d
-  initialiseInvites() {
-    this.ngOnInit();
-  }
+  //initialiseInvites() {
+  //  this.ngOnInit();
+  //}
 
 
 
