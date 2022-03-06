@@ -25,7 +25,8 @@
         ],
         "urls": [
           "https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap",
-          "https://fonts.googleapis.com/icon?family=Material+Icons"
+          "https://fonts.googleapis.com/icon?family=Material+Icons",
+          "https://test-7c672.firebaseio.com"
         ]
       }
     }
