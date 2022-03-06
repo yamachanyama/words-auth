@@ -138,3 +138,4 @@ export class ContactListComponent implements OnInit {
     // this.changeDetectorRef.detectChanges();
   }
 
+}
