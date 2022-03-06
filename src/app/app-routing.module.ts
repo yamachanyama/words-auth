@@ -11,6 +11,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  //https://qiita.com/ParisMichael/items/6a1bed373f0bf4ce755d
   imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
   exports: [RouterModule]
 })
