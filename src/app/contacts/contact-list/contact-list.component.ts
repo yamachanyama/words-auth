@@ -29,7 +29,7 @@ export class ContactListComponent implements OnInit {
   /* selectedContact: Contact */  
   check: boolean | any[] =[this.pageSize];
 
-   //追加
+   //追加 https://qiita.com/ParisMichael/items/6a1bed373f0bf4ce755d
   navigationSubscription;
 
   constructor (
@@ -49,8 +49,10 @@ export class ContactListComponent implements OnInit {
     })
   }
 
-  // 好きな初期化メソッド
-  initialiseInvites() {}
+  // 好きな初期化メソッドhttps://qiita.com/ParisMichael/items/6a1bed373f0bf4ce755d
+  initialiseInvites() {
+    this.ngOnInit();
+  }
 
 
 
