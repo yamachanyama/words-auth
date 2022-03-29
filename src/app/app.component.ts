@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
     //
     //  this.afAuth.auth.onAuthStateChanged((usr)=>{
     // this.DisplayName = (await this.afAuth.currentUser).displayName;
+    
     this.afAuth.onAuthStateChanged((usr)=>{
       // Authentificationの後も継続して処理が行われるようにngZone.runを入れる　https://books.google.co.jp/books?id=QsCmDwAAQBAJ&lpg=PT465&dq=angular&hl=ja&pg=PT417#v=onepage&q=angular&f=false
       console.log("onAuthStateChanged");
