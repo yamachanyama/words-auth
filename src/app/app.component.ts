@@ -17,7 +17,8 @@ export class AppComponent implements OnInit {
   
   DisplayName: string;
 
-  async ngOnInit() {
+//async ngOnInit() {
+  ngOnInit() {
     //  https://firebase.google.com/docs/reference/js/firebase.auth.Auth
     console.log("ngOnInit");
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
