@@ -3,6 +3,7 @@ import { Contact } from './contact';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Observer, fromEvent, lastValueFrom, firstValueFrom } from 'rxjs';
 import { map } from 'rxjs/operators';
+//toPromiseが使えなくなったため、observableからpromiseへの変換にlastValueFromを使用。https://rxjs.dev/api/index/function/lastValueFrom
 
 @Injectable()
 export class ContactService {
@@ -16,15 +17,13 @@ export class ContactService {
   /*  private contactsUrl = '/assets/contactdata.json'; */
 
   constructor (private http: HttpClient) {}
-  /* get("/api/contacts/:skip")
-    getContacts(skip): Promise<Contact[]> {
+  //get("/api/contacts/:skip")
+  /*getContacts(skip): Promise<Contact[]> {
       return this.http.get(this.contactsUrl1 +'/' + skip.toString())
                  .toPromise()
                  .then(response => response.json() as Contact[])
                  .catch(this.handleError);
-    }
-  */
-  // get("/api/contacts/:skip")
+    }*/
   getContacts$(skip,ok_ng,pageSize): Observable<Contact[]> {
     return this.http.get<Contact[]>(this.contactsUrl1 + '/' + skip.toString() + '/' + ok_ng.toString() + '/' + pageSize.toString());
   //                  .pipe(map(
@@ -45,11 +44,8 @@ export class ContactService {
     return result;
   }
 
-  /*
-    getContacts():Promise<Contact[]> {
-      return ()=>this.contactdata;
-    }
-  */
+  /*getContacts():Promise<Contact[]> {
+      return ()=>this.contactdata;}  */
 
   // post("/api/contact")
   public async createContact(newContact: Contact) {
