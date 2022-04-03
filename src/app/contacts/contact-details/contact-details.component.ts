@@ -85,7 +85,7 @@ export class ContactDetailsComponent {
   createContact(): void {
     this.contactService.createContact(this.contact)
     .then(contact => this.contact = contact);
-    this.goBack();
+//  this.goBack();
   }
 
   updateContact(): void {

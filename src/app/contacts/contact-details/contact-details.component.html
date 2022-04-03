@@ -8,40 +8,44 @@
 <div *ngIf="contact" class="row">
   <div>
     <div *ngIf = "contact._id; else showNewContact">
-    <swiper
-      [initialSlide] = "startpage"
-      [slidesPerView]="1"
-      [spaceBetween]="30"
-      [loop]="true"
-      [navigation]="true"
-      class="mySwiper"
-    >
-    <ng-container *ngFor="let contact of contacts; index as i">
-      <ng-template swiperSlide><div  align="center">
+      <swiper
+        [initialSlide] = "startpage"
+        [slidesPerView]="1"
+        [spaceBetween]="30"
+        [loop]="true"
+        [navigation]="true"
+        class="mySwiper" >
+      
+        <ng-container *ngFor="let contact of contacts; index as i">
+          <ng-template swiperSlide>
+            <div  align="center">
 
-        <mat-form-field appearance="fill">
-          <mat-label>Word</mat-label>
-          <textarea matInput [(ngModel)]="contact.word"></textarea>
-        </mat-form-field>
-        <p></p>
-        <mat-form-field appearance="fill">
-          <mat-label>Meaning</mat-label>
-          <textarea matInput [(ngModel)]="contact.meaning"></textarea>
-        </mat-form-field>
-        <p></p>
-        <p></p>
+            <mat-form-field appearance="fill">
+              <mat-label>Word</mat-label>
+              <textarea matInput [(ngModel)]="contact.word"></textarea>
+            </mat-form-field>
+            <p></p>
+            <mat-form-field appearance="fill">
+              <mat-label>Meaning</mat-label>
+              <textarea matInput [(ngModel)]="contact.meaning"></textarea>
+            </mat-form-field>
+            <p></p>
+            <p></p>
 
-        <div *ngIf = "i==startpage">
-          <button class="btn btn-info" *ngIf="contact._id" (click)="updateContact()">Update</button>
-          <button class="btn btn-danger" *ngIf="contact._id" (click)="deleteContact()">Delete</button>
-        </div>
+            <div *ngIf = "i==startpage">
+              <button class="btn btn-info" *ngIf="contact._id" (click)="updateContact()">Update</button>
+              <button class="btn btn-danger" *ngIf="contact._id" (click)="deleteContact()">Delete</button>
+            </div>
 
-      </div></ng-template>
-    </ng-container>
-    <p></p>
-    </swiper>
+            </div>
+          </ng-template>
+        </ng-container>
+
+      <p></p>
+      </swiper>
     </div>
 
+    <!-- "showNewContactの場合のみ表示する"-->
     <ng-template #showNewContact>
       <div class="form-group">
         <label for="contact-word">Word</label>
@@ -54,7 +58,6 @@
       </div>
 
       <button class="btn btn-primary" (click)="createContact()">Create</button>
-
     </ng-template>
 
   </div>
