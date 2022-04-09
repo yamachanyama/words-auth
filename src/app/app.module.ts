@@ -40,7 +40,6 @@ var config = {
   messagingSenderId: "168025708100",
   appId: "1:168025708100:web:aab2bcac717f23aa"
 }
-AngularFireModule.initializeApp(config);
 
 @NgModule({
   declarations: [
@@ -55,6 +54,7 @@ AngularFireModule.initializeApp(config);
     HttpClientModule,
     NgbModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(config),
     AngularFireAuthModule,
     AngularFirestoreModule,
     AppRoutingModule,
