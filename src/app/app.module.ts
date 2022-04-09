@@ -55,7 +55,6 @@ AngularFireModule.initializeApp(config);
     HttpClientModule,
     NgbModule,
     BrowserAnimationsModule,
-    AngularFireModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
     AppRoutingModule,
