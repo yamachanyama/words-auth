@@ -42,12 +42,6 @@ var config = {
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ContactDetailsComponent,
-    ContactListComponent,
-    ContactSearchComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -74,6 +68,12 @@ var config = {
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     })
+  ],
+  declarations: [
+    AppComponent,
+    ContactDetailsComponent,
+    ContactListComponent,
+    ContactSearchComponent
   ],
   providers: [ContactService],
   bootstrap: [AppComponent]
