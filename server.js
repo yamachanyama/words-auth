@@ -7,7 +7,7 @@ var CONTACTS_COLLECTION = "words";
 
 var app = express();
 // bodyParser.json　で警告が出ているので、下記を参考にexpress.jsonに変更2021.10.30
-// 因みにbodyParserはクライアントからのpost利用の際にサーバ側で必要となるもの。
+// 因みにbodyParserはクライアントからのpost利用の際にサーバ側で必要となるもの。。
 // https://qiita.com/atlansien/items/c587a0bf2f7f9022107c
 // app.use(bodyParser.json());
 app.use(express.json());
