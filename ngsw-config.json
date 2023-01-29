@@ -36,7 +36,9 @@
       "name": "api-freshness",
       "urls": [
         "/",
-        "/api"
+        "/api",
+        "https://securetoken.googleapis.com/v1/",
+        "https://identitytoolkit.googleapis.com/v1/"
       ],
       "cacheConfig": {
         "strategy": "freshness",
