@@ -21,8 +21,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     //  https://firebase.google.com/docs/reference/js/firebase.auth.Auth
     console.log("ngOnInit");
-    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
-
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+    // .NONE⇒LOCALに変更　2023.1.29 https://coconala.com/blogs/1638666/35054
     //    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
 
     //  onAuthStateChangedについて　⇒https://firebase.google.com/docs/auth/web/manage-users?hl=ja
