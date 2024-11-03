@@ -2,6 +2,8 @@
   <h3>{{ok_ng}} List: <input [(ngModel)]="keyword">
     <!--    <h3>Words: <input #keyword id="test" [value]=getCurrentValue()/> -->
     <button class="btn btn-primary" *ngIf="keyword" routerLink="/search" [queryParams] = "{keyword: keyword}">Search!!</button>
+     　 <button class="btn btn-warning" routerLink="/detail/0">New</button> <!--新規作成の場合はURLをdetail/0としてcontact-detailへ渡す-->
+
   </h3>
 
   <table class="table table-hover">
@@ -22,7 +24,6 @@
     </tbody>
   </table>
 
-  <button class="btn btn-warning" routerLink="/detail/0">New</button> <!--新規作成の場合はURLをdetail/0としてcontact-detailへ渡す-->
   <button class="btn btn-primary" (click)="changePage()">OK/NG</button>
   <button class="btn btn-primary" (click)="change_status()">Change NG to OK</button>
   <!-- <ngb-pagination id="sample" [collectionSize]="count"  [(page)]="page" [pageSize]="pageSize" [maxSize]="maxSize" [rotate]="true" [ellipses]="false" [boundaryLinks]="true" (pageChange)="next_list()" routerLink="" [queryParams] ="{page: page}"> -->
